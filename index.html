@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Robotic arm GUI</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="engine.js"></script>
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <!-- Grasper -->
+           
+            <div class="robot-steering-part-wrapper">
+                <div class="arrows-move-part-wrapper">
+                    <button class="grasper-open"><i class="fas fa-lock-open"></i></button>
+                    <button class="grasper-close"><i class="fas fa-lock"></i></button>
+                </div>
+
+                <div class="robot-parts-wrapper">
+                    <input type="text" id="robot-part-grasper-state" class="robot-part-angle" value="OPEN" style="width: 100px;" readonly  />
+                </div>
+            </div>  
+            
+            <!-- Top arm -->
+              
+            <div class="robot-steering-part-wrapper">
+                <div class="arrows-move-part-wrapper">
+                    <button class="arrow-top-arm-swing-left"><i class="fas fa-arrow-left"></i></button>
+                    <button class="arrow-top-arm-swing-right"><i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="robot-parts-wrapper">
+                    <div class="robot-part-base" id="robot-part-top">
+                        <div class="robot-part-base-half"></div>
+                        <div class="robot-part-base-half"></div>
+                    </div>
+                    <input type="number" min="0" max="180" id="robot-part-top-arm-angle" class="robot-part-angle" value="0" readonly /><p>°</p>
+                </div>
+            </div>  
+           
+            <!-- Top spin arm -->
+           
+            <div class="robot-steering-part-wrapper">
+                <div class="arrows-move-part-wrapper">
+                    <button class="arrow-top-arm-spin-left"><i class="fas fa-undo"></i></button>
+                    <button class="arrow-top-arm-spin-right"><i class="fas fa-redo"></i></button>
+                </div>
+
+                <div class="robot-parts-wrapper">
+                    <div class="robot-part-base" id="robot-part-top-spin">
+                        <div class="robot-part-base-half"></div>
+                        <div class="robot-part-base-half"></div>
+                    </div>
+                    <input type="number" min="0" max="360" id="robot-part-top-spin-arm-angle" class="robot-part-angle" value="0" readonly /><p>°</p>
+                </div>
+            </div>  
+           
+            <!-- Middle arm -->
+           
+            <div class="robot-steering-part-wrapper">
+                <div class="arrows-move-part-wrapper">
+                    <button class="arrow-middle-arm-swing-left"><i class="fas fa-arrow-left"></i></button>
+                    <button class="arrow-middle-arm-swing-right"><i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="robot-parts-wrapper">
+                    <div class="robot-part-base" id="robot-part-middle">
+                        <div class="robot-part-base-half"></div>
+                        <div class="robot-part-base-half"></div>
+                    </div>
+                    <input type="number" min="0" max="180" id="robot-part-middle-arm-angle" class="robot-part-angle" value="0" readonly /><p>°</p>
+                </div>
+            </div>        
+                    
+            <!-- Bottom arm -->
+           
+            <div class="robot-steering-part-wrapper">
+                <div class="arrows-move-part-wrapper">
+                    <button class="arrow-bottom-arm-swing-left"><i class="fas fa-arrow-left"></i></button>
+                    <button class="arrow-bottom-arm-swing-right"><i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="robot-parts-wrapper">
+                    <div class="robot-part-base" id="robot-part-bottom">
+                        <div class="robot-part-base-half"></div>
+                        <div class="robot-part-base-half"></div>
+                    </div>
+                    <input type="number" min="0" max="360" id="robot-part-bottom-arm-angle" class="robot-part-angle" value="0" readonly /><p>°</p>
+                </div>
+            </div>
+            
+            <!-- Rotation Base -->
+           
+            <div class="robot-steering-part-wrapper">
+                <div class="arrows-move-part-wrapper">
+                    <button class="arrow-spin-left"><i class="fas fa-undo"></i></button>
+                    <button class="arrow-spin-right"><i class="fas fa-redo"></i></button>
+                </div>
+
+                <div class="robot-parts-wrapper">
+                    <div class="robot-part-base" id="robot-part-base">
+                        <div class="robot-part-base-half"></div>
+                        <div class="robot-part-base-half"></div>
+                    </div>
+                    <input type="number" min="0" max="360" id="robot-part-base-angle" class="robot-part-angle" value="0" readonly /><p>°</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
